@@ -1,5 +1,6 @@
 import 'package:http/http.dart' as http;
 import 'dart:convert';
+import 'dart:io';
 
 class User{
   int? id;
@@ -35,7 +36,7 @@ class Company{
     this.catchPhrase = map['catchPhrase'];
     this.bs = map['bs'];
   }
-   @override
+  @override
   String toString(){
     return '''{
     "name": $name,
@@ -82,7 +83,7 @@ class Geo{
     this.lat = map['lat'];
     this.lng = map['lng'];
   }
-   @override
+  @override
   String toString(){
     return '''{
     "lat": $lat,
@@ -91,9 +92,9 @@ class Geo{
     }
 }
 void main() async {
-  //print("Ingresa id entre 1 y 10:");
-  //int id = int.parse(stdin.readLineSync()!);
-  var url = Uri.https('jsonplaceholder.typicode.com','/users/1');
+  print("Ingresa id entre 1 y 10:");
+  int id = int.parse(stdin.readLineSync()!);
+  var url = Uri.https('jsonplaceholder.typicode.com','/users/$id');
   print ('calculando...');
   var response = await http.get(url);
   print('Response status: ${response.statusCode}');
@@ -105,5 +106,5 @@ void main() async {
   print(u.address);
   print(u.phone);
   print(u.website);
-  print(u.company); 
+  print(u.company);
 }
