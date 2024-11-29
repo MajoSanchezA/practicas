@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=, initial-scale=1.0">
+    <title>Document</title>
+<style>
+    table{  
+        border-radius: 0px 0px 15px 15px;;
+        width: 100%;
+    }
+    td{
+        border: 3px solid;
+        padding: 10px;
+        width: 50%;
+        font-family:'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    
+    tr{
+        background-color: lightgray;
+        text-align: center;
+        
+    }
+    header{
+        text-align: center;
+        border-radius: 15px 15px 0px 0px;
+        border-bottom: 3px solid;
+        font-size: 20px;
+        font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    }
+    main{
+        border: 3px solid;
+        width: 400px;
+        border-radius: 20px;
+        margin: auto;
+
+    }
+
+    footer{
+        display: flex;
+        flex-direction: column;
+        padding: 10px;
+        
+    }
+    input{
+        margin-top: 10px;
+        margin: 10px auto;
+        width: 40px;
+        padding: 10px;
+    }
+
+    button{
+        
+        margin: auto;
+        padding: 10px;
+        /* background-color: gray; */
+        border: none;
+    }
+</style>
+</head>
+<body>
+    <main>
+        <header>
+            <h3>DATOS DE USUARIO</h3>
+        </header>
+        <section>
+            <table>
+                <tr>
+                    <td>UserId:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Id:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>Title:</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td class="a">Completed:</td>
+                    <td class="b"></td>
+                </tr>
+            </table>
+        </section>
+        <footer>
+            <input type="text" placeholder="ID" id="a">
+            <button type="submit" id="button">Buscar</button>
+        </footer>
+        <script src="assets/js/jav.js"></script>
+    </main>
+    </body>
+    </html>
